@@ -71,6 +71,12 @@ h1 {
     text-decoration: none; }
   #facts li:before {
     content: "★ "; }
+  #facts .snowman {
+    color: #d7f3fa;
+    font-weight: bold;
+    text-shadow: #93aeff 1px 1px 10px; }
+    #facts .snowman:before {
+      content: "☃ "; }
 
 .laser {
   display: block;
