@@ -3,7 +3,7 @@ fs = require 'fs'
 exec = require('child_process').exec
 
 task 'deploy', 'copies files to remote server', ->
-  rsync = exec "rsync -av -e ssh --exclude '*sass-cache*' --exclude '*git*' --exclude 'Cakefile' . lasers@motherfuckinglasers.com:~/public/", (error, stdout, stderr) ->
+  rsync = exec "rsync -av -e ssh --exclude '.DS_Store' --exclude '*sass-cache*' --exclude '*git*' --exclude 'Cakefile' . lasers@motherfuckinglasers.com:~/public/", (error, stdout, stderr) ->
     puts stdout
 
 task 'watch', 'watches and compilees coffee & sass', ->
