@@ -21,14 +21,17 @@ jQuery(document).ready ($) ->
     
     translateX = i * 70
     rotate = -85 + i * 3
+    transform = "translate(#{translateX}px, 0px) rotate(#{rotate}deg)"
     
     $('<div/>')
       .addClass('purple laser')
       .css({
         'bottom': '-10px'
         'left': '0px'
-        '-webkit-transform': "translate3d(#{translateX}px, 0px, 0px) rotate(#{rotate}deg)"
-        '-moz-transform':    "translate(#{translateX}px, 0px) rotate(#{rotate}deg)"
+        '-webkit-transform': transform
+        '-moz-transform':    transform
+        '-o-transform':      transform
+        'transform':         transform
       })
       .appendTo(party)
   
@@ -36,16 +39,21 @@ jQuery(document).ready ($) ->
     
     translateY = 70*j
     rotate = (j+1)*2
+    transform = "translate(0px, #{translateY}px) rotate(#{rotate}deg)"
     
     $('<div/>')
       .addClass('blue laser')
       .css({
         'top': '0px'
         'left': '-10px'
-        '-webkit-transform': "translate3d(0px, #{translateY}px, 0px) rotate(#{rotate}deg)"
-        '-moz-transform':    "translate(0px, #{translateY}px) rotate(#{rotate}deg)"
+        '-webkit-transform': transform
+        '-moz-transform':    transform
+        '-o-transform':      transform
+        'transform':         transform
       })
       .appendTo(party)
+  
+  body.append(party)
   
   # OH MY GOD, IT’S A CALLBACK PINETREE!
   every 10000, ->
@@ -56,5 +64,3 @@ jQuery(document).ready ($) ->
         heading.addClass('no-power')
         after 20, ->
           heading.removeClass('no-power')
-  
-  body.append(party)
