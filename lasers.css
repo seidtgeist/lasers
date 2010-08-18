@@ -73,10 +73,16 @@ h1 {
     content: "★ "; }
   #facts .snowman {
     color: #d7f3fa;
+    margin-bottom: 3px;
     font-weight: bold;
     text-shadow: #93aeff 1px 1px 10px; }
     #facts .snowman:before {
-      content: "☃ "; }
+      content: ""; }
+  #facts .tweet:before {
+    content: ""; }
+  #facts .tweet-button .tb {
+    -webkit-box-shadow: #93aeff 0px 0px 20px, #93aeff 0px 0px 20px, #93aeff 0px 0px 20px;
+    -moz-box-shadow: 0 0 20px #93aeff, 0 0 20px #93aeff, 0 0 20px #93aeff; }
 
 .laser {
   display: block;
