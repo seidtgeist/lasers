@@ -1,0 +1,76 @@
+@import "compass/reset"
+@import "compass/css3"
+
+body
+  font:
+    family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", sans-serif
+    size: 14px
+  +linear-gradient(color-stops(#4a4d7f, #1e1a41), left)
+
+h1
+  color: #ebb3f2
+  font-family: "continuo-1", "continuo-2", impact, arial, sans-serif
+  font-size: 120px
+  position: absolute
+  +text-shadow(#aa7aa3, 1px, 1px, 10px)
+  +transform(1, -13deg, 100px, 100px)
+  z-index: 1
+  
+  &.no-power
+    color: #fff
+    text-shadow: none
+
+#facts
+  background: rgba(0, 0, 0, 0.75)
+  +border-radius(8px)
+  bottom: 10px
+  color: #fff
+  line-height: 1.5
+  padding: 10px
+  position: absolute
+  right: 10px
+  z-index: 1
+  
+  a
+    color: #fff
+    font-weight: bold
+    text-decoration: none
+  
+  li:before
+    content: '★ '
+  
+  .snowman
+    color: #d7f3fa
+    margin-bottom: 3px
+    font-weight: bold
+    text-shadow: #93aeff 1px 1px 10px
+    
+    &:before
+      content: ''
+  
+  .tweet
+    &:before
+      content: ''
+
+.laser
+  display: block
+  height: 3px
+  overflow: hidden
+  position: absolute
+  +transform-origin(0px, 0px)
+  width: 4000px
+
+@mixin laser-color($color, $glowColor)
+  background: $color
+  $shadow: $glowColor 0px 0px 20px
+  $strongerShadow:  $shadow, $shadow, $shadow
+  -webkit-box-shadow: $strongerShadow
+  -moz-box-shadow: $strongerShadow
+  -o-box-shadow: $strongerShadow
+  box-shadow: $strongerShadow
+
+.blue
+  +laser-color(#d7f3fa, #93aeff)
+
+.purple
+  +laser-color(#ebb3f2, #aa7aa3)
