@@ -10,7 +10,7 @@ pick = ->
 jQuery(document).ready ($) ->
   body = $('body')
   heading = $('h1')
-  party = $('#party')
+  party = $('<div/>').attr('id', 'party')
   height = $(document).height()
   width = $(document).width()
   

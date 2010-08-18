@@ -15,7 +15,7 @@
     var body, heading, height, i, j, party, rotate, transform, translateX, translateY, width, xLasers, yLasers;
     body = $('body');
     heading = $('h1');
-    party = $('#party');
+    party = $('<div/>').attr('id', 'party');
     height = $(document).height();
     width = $(document).width();
     xLasers = ~~(width / 70);
