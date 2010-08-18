@@ -1,7 +1,7 @@
-Lasers
-======
+CSS3 Lasers
+===========
 
-View it in action on http://motherfuckinglasers.com/
+View them in action on <http://motherfuckinglasers.com>
 
 Bugs
 ----
